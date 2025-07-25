@@ -52,9 +52,12 @@
 body {
   font-family: "OpenRunde", sans-serif;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: normal;
   -webkit-font-smoothing: antialiased;
   background-color: var(--sand-2);
+  color: var(--sand-12);
+  font-size: 16px;
+  letter-spacing: -0.08px;
 }
 
 /* Improve text rendering for headings and paragraphs */
@@ -72,6 +75,7 @@ h6 {
 p {
   text-wrap: pretty;
   overflow-wrap: break-word;
+  color: var(--sand-12);
 }
 
 /* ==========================================================================
@@ -108,4 +112,16 @@ select {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* ==========================================================================
+   MATIN'S CODE
+   ========================================================================== */
+
+/* Create a root stacking context */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
