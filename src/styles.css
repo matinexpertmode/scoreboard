@@ -1,0 +1,111 @@
+/* ==========================================================================
+   FONT DECLARATIONS
+   ========================================================================== */
+
+@font-face {
+  font-family: "OpenRunde";
+  src: url("./fonts/OpenRunde-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenRunde";
+  src: url("./fonts/OpenRunde-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   RADIX COLORS
+   ========================================================================== */
+
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/jade.css";
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/sand.css";
+
+/* ==========================================================================
+   CSS RESET & BASE STYLES
+   ========================================================================== */
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+body {
+  font-family: "OpenRunde", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--sand-2);
+}
+
+/* Improve text rendering for headings and paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  color: var(--sand-12);
+}
+
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+   MEDIA ELEMENTS
+   ========================================================================== */
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+   ========================================================================== */
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ==========================================================================
+   LAYOUT & STACKING
+   ========================================================================== */
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
