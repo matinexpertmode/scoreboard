@@ -129,6 +129,7 @@ select {
 }
 
 .score-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,7 +139,6 @@ select {
   width: 100%;
   max-width: 480px;
 }
-
 .top-container {
   display: flex;
   flex-direction: column;
@@ -152,9 +152,11 @@ select {
 }
 
 .time-indicator {
-  position: relative;
-  top: -0.8rem;
-  display: flex;
+  position: absolute; /* Change from relative to absolute */
+  top: 48px; /* Position it to overlap the border */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
   padding: 0 0.4rem;
   justify-content: center;
   align-items: center;
@@ -179,5 +181,74 @@ select {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 164px;
+  height: 180px;
+  gap: 0;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  border-right: 1px solid var(--sand-6);
+  gap: 0.5rem;
+}
+
+.score:last-child {
+  border-right: none;
+}
+
+.score output {
+  font-size: 60px; /* Match Figma design */
+  font-weight: 600;
+  letter-spacing: -1.8px;
+}
+
+.badge {
+  padding: 0.125rem 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sand-4);
+  border-radius: 24px;
+  color: var(--sand-11);
+}
+
+.reset {
+  color: var(--blue-11);
+}
+
+.button-group {
+  display: flex;
+  background-color: var(--sand-1);
+  border: 1px solid var(--sand-6);
+  border-radius: 9999px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto; /* Add this to center it */
+}
+
+.button-group button {
+  flex: 1 1 0; /* More explicit flex (grow, shrink, basis) */
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-right: 1px solid var(--sand-6);
+  cursor: pointer;
+  min-width: 0; /* Important for flex items */
+}
+
+/* Remove border from last button */
+.button-group button:last-child {
+  border-right: none;
+}
+
+.plus {
+  color: var(--jade-11);
+}
+
+.minus {
+  color: var(--red-11);
 }
