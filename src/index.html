@@ -93,23 +93,23 @@
         <div class="bottom-container">
           <div class="score">
             <p>Spain</p>
-            <output>1</output>
+            <output id="score-spain">1</output>
             <p class="badge">Home</p>
           </div>
           <div class="score">
             <p>Belgium</p>
-            <output>2</output>
+            <output id="score-belgium">2</output>
             <p class="badge">Away</p>
           </div>
         </div>
       </div>
       <div class="button-group">
-        <button class="plus">+1</button>
-        <button class="plus">+2</button>
-        <button class="plus">+3</button>
-        <button class="minus">-3</button>
-        <button class="minus">-2</button>
-        <button class="minus">-1</button>
+        <button class="plus" onclick="increaseScore()"">+1</button>
+        <button class="plus" onclick="increaseScore()"">+2</button>
+        <button class="plus" onclick="increaseScore()"">+3</button>
+        <button class="minus" onclick="decreaseScore()"">-3</button>
+        <button class="minus" onclick="decreaseScore()"">-2</button>
+        <button class="minus" onclick="decreaseScore()"">-1</button>
       </div>
       <span class="reset">Reset</span>
     </div>
